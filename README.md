@@ -46,7 +46,7 @@ Como suelen decir en la comunidad de linux. Solamente [R.T.F.M](https://en.wikip
 
 ```sh
 cd ~/Downloads/
-wget https://github.com/linuxmobile/runarch/blob/master/dwm/install.sh 
+wget https://github.com/CarlosMolinesPastor/runarch/blob/master/dwm/install.sh 
 ./install.sh
 ```
 
@@ -79,13 +79,9 @@ makepkg -si
 echo "### Installing Required Packages"
 paru -S dunst ffmpeg ffmpegthumnailer tumbler neovim viewnior mpv rofi rsync scrot  \
 picom-jonaburg-fix pavucontrol ranger noto-fonts xwallpaper imlib2 fzf exa bat      \
-gvfs file-roller xclip ueberzug pacman-contrib cava libxft-bgra rofi-emoji starship 
-```
-
-**Como adicional se puede instalar**
-```sh
-paru -S pipewire pipewire-alsa pipewire-pulse # Remplazando pulseaudio \
-thunar thunar-volman thunar-archive-plugin # Si no te gusta ranger     
+gvfs file-roller xclip ueberzug pacman-contrib cava libxft-bgra rofi-emoji starship \
+gazelle-tui foot  pipewire pipewire-alsa pipewire-pulse # Remplazando pulseaudio \
+thunar thunar-volman thunar-archive-plugin
 ```
 
 #### Instalamos Oh-My-Zsh Plugins 🔌
@@ -128,7 +124,7 @@ _Algunas de las configuraciones que pueden ubicar en mis dotfiles_
 ##### Clonamos y Copiamos
 
 ```sh 
-git clone https://github.com/linuxmobile/dwm-dots $HOME/dwm-dots/  
+git clone https://github.com/CarlosMolinesPastor/dwm-dots $HOME/dwm-dots/  
 cd $HOME/dwm-dots/
 rsync -avxHAXP --exclude '.git*' .* ~/  
 ```
