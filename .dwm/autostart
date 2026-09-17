@@ -1,34 +1,49 @@
 #!/bin/sh
 
-# add your autostart stuffs here
+# ============================================================
+#  AUTOSTART DE DWM
+#  Se ejecuta al iniciar la sesión de Xorg con dwm
+# ============================================================
 
-# Add Background
+# Fondo de pantalla
 xwallpaper --zoom ~/.wallpapers/4.png &
 
-# Xresources
+# Recursos X (colores, cursores, etc.)
 xrdb merge ~/.Xresources &
 
-# Set Layout to Latam
+# Distribución de teclado latinoamericana
 setxkbmap latam &
 
-# Disable Screensaver
+# Desactivar salvapantallas y DPMS
 xset -dpms s off &
 
-# Notify
+# Notificaciones (dunst)
 dunst -config ~/.config/dunst/dunstrc-dark-left &
 
-# Clipboard
+# Portapapeles (xclip)
 xclip &
 
-# Run compositor
+# Compositor (picom) para transparencias y sombras
 picom &
 
-# test reset wal-git
+# Restaurar tema de colores generado por pywal
 wal -r &
 
-# run bar script and dwm ( do not remove this )
+# ------------------------------------------------------------
+#  Terminal kitty
+#  Se lanza siempre (no necesita modo servidor como foot)
+# ------------------------------------------------------------
+# (No hace falta lanzar nada: kitty arranca bajo demanda con Super+t)
+
+# ------------------------------------------------------------
+#  Barra de estado personalizada + dwm
+#  (NO eliminar estas líneas)
+# ------------------------------------------------------------
 ~/.dwm/bar/./bar.sh &
 dwm &
 
-# Nice hello! script
+# Applet de NetworkManager (para notificaciones de red)
+nm-applet &
+
+# Script de bienvenida (se ejecuta 3 segundos después de arrancar)
 sleep 3 && ~/.local/bin/hello.sh
