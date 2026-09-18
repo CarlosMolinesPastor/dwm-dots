@@ -30,12 +30,6 @@ picom &
 wal -r &
 
 # ------------------------------------------------------------
-#  Terminal kitty
-#  Se lanza siempre (no necesita modo servidor como foot)
-# ------------------------------------------------------------
-# (No hace falta lanzar nada: kitty arranca bajo demanda con Super+t)
-
-# ------------------------------------------------------------
 #  Barra de estado personalizada + dwm
 #  (NO eliminar estas líneas)
 # ------------------------------------------------------------
